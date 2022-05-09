@@ -13,12 +13,12 @@
 
     <meta name="keywords" content="awesome-team, awesome theme, theme bizweb dep, theme responsive, overpowered, DKT, BIZWEB">
 
-    <link rel="canonical" href="index.html">
+    <link rel="canonical" href="/">
     <meta name='revisit-after' content='1 days'>
     <meta name="robots" content="noodp,index,follow">
     <!-- ================= Favicon ================== -->
     @yield('styles')
-    <link rel="icon" href="../asset/100/109/381/themes/819670/assets/favicon.png" type="image/x-icon">
+    <link rel="icon" href="../asset/image/logo/minilogo.png" type="image/x-icon">
 
     <!-- Facebook Open Graph meta tags -->
 
@@ -117,7 +117,7 @@
         <div class="topbar">
             <div class="container">
                 <div class="topbar__wrap">
-                    <div class="topbar__left hidden-xs">
+                    <!-- <div class="topbar__left hidden-xs">
                         <div class="item first">
                             <span><b>Tư vấn 24/7:</b> </span>
                             <span><a href="tel:19006750">19006750</a></span>
@@ -175,7 +175,7 @@
                             </div>
                         </div>
 
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -190,8 +190,8 @@
                         <div class="col-lg-3 col-md-3 col-xs-12 col-sm-12">
                             <div class="logo">
 
-                                <a href="index.html" class="logo-wrapper ">
-                                    <img src="../asset/100/109/381/themes/819670/assets/logo.png" alt="logo ">
+                                <a href="/" class="logo-wrapper ">
+                                    <img src="../asset/image/logo/logo3.png" height="40%" width="50%" alt="logo ">
                                 </a>
 
                             </div>
@@ -204,7 +204,7 @@
                                             <div class="section_service__wrap">
                                                 <span class="section_service__icon"><img src="../asset/100/109/381/themes/819670/assets/service_icon_1.png" alt="Tư vấn 24/7 miễn phí"></span>
                                                 <div class="section_service__content">
-                                                    <p class="section_service__text">Tư vấn 24/7<span>miễn phí</span>
+                                                    <p class="section_service__text">Tư vấn<span>miễn phí</span>
                                                     </p>
                                                 </div>
                                             </div>
@@ -221,7 +221,7 @@
                                             <div class="section_service__wrap">
                                                 <span class="section_service__icon"><img src="../asset/100/109/381/themes/819670/assets/service_icon_3.png" alt="Nhận hàng nhận tiền"></span>
                                                 <div class="section_service__content">
-                                                    <p class="section_service__text">Nhận hàng<span>nhận tiền</span></p>
+                                                    <p class="section_service__text">Hỗ trợ<span>trả góp</span></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -239,177 +239,32 @@
                 <nav>
                     <ul id="nav" class="nav hidden-sm hidden-xs">
                         <li class="hidden-sm hidden-xs nav-item active"><a class="nav-link" href="index.html">Trang chủ</a></li>
-                        <li class="hidden-sm hidden-xs nav-item "><a class="nav-link" href="gioi-thieu.html">Giới thiệu</a></li>
+                        <li class="hidden-sm hidden-xs nav-item "><a class="nav-link" href="">Giới thiệu</a></li>
                         <li class="hidden-sm hidden-xs nav-item  has-mega has-dropdown">
-                            <a href="collections/all.html" class="nav-link">Sản phẩm <i class="fa fa-angle-down" data-toggle="dropdown"></i></a>
+                            <a href="{{route('all')}}" class="nav-link">Sản phẩm <i class="fa fa-angle-down" data-toggle="dropdown"></i></a>
 
                             <div class="mega-content">
                                 <div class="level0-wrapper2">
                                     <div class="nav-block nav-block-center">
                                         <ul class="level0">
 
-
+                                            @foreach($cates as $cate)
                                             <li class="level1 parent item">
-                                                <h2 class="h4"><a href="phong-khach.html"><span>Phòng khách</span></a>
+                                                <h2 class="h4"><a href="{{route('listProductInCate',$cate->id)}}"><span>{{$cate->ten_loaisanpham}}</span></a>
                                                 </h2>
                                                 <ul class="level1">
-
-                                                    <li class="level2"> <a href="ban-ghe-go.html"><span>Bàn ghế
-                                                                gỗ</span></a> </li>
-
-                                                    <li class="level2"> <a href="sofa-phong-khach.html"><span>Sofa phòng
-                                                                khách</span></a> </li>
-
-                                                    <li class="level2"> <a href="tu-de-giay.html"><span>Tủ để
-                                                                giày</span></a> </li>
-
-                                                    <li class="level2"> <a href="tu-ruou.html"><span>Tủ rượu</span></a>
-                                                    </li>
-
-                                                    <li class="level2"> <a href="vach-ngan.html"><span>Vách
-                                                                ngăn</span></a> </li>
-
+                                                @foreach($catesCT as $catect)
+                                                    @if($catect->loaisanpham_id == $cate->id)
+                                                    <li class="level2"> <a href="{{route('listProduct',$catect->id)}}"><span>{{$catect->ten_chitiet_loaisanpham}}</span></a> </li>
+                                                    @endif
+                                                 @endforeach
+                                                   
                                                 </ul>
                                             </li>
+                                            @endforeach
 
 
-
-                                            <li class="level1 parent item">
-                                                <h2 class="h4"><a href="phong-ngu.html"><span>Phòng ngủ</span></a></h2>
-                                                <ul class="level1">
-
-                                                    <li class="level2"> <a href="giuong-ngu.html"><span>Giường
-                                                                ngủ</span></a> </li>
-
-                                                    <li class="level2"> <a href="ke-tivi.html"><span>Kệ tivi</span></a>
-                                                    </li>
-
-                                                    <li class="level2"> <a href="ban-trang-diem.html"><span>Bàn trang
-                                                                điểm</span></a> </li>
-
-                                                    <li class="level2"> <a href="ban-lam-viec.html"><span>Bàn làm
-                                                                việc</span></a> </li>
-
-                                                    <li class="level2"> <a href="tu-quan-ao.html"><span>Tủ quần
-                                                                áo</span></a> </li>
-
-                                                </ul>
-                                            </li>
-
-
-
-                                            <li class="level1 parent item">
-                                                <h2 class="h4"><a href="sofa.html"><span>Sofa</span></a></h2>
-                                                <ul class="level1">
-
-                                                    <li class="level2"> <a href="sofa-da.html"><span>Sofa da</span></a>
-                                                    </li>
-
-                                                    <li class="level2"> <a href="sofa-cafe.html"><span>Sofa
-                                                                cafe</span></a> </li>
-
-                                                    <li class="level2"> <a href="sofa-giuong.html"><span>Sofa
-                                                                giường</span></a> </li>
-
-                                                    <li class="level2"> <a href="sofa-phong-khach-1.html"><span>Sofa
-                                                                nghỉ</span></a> </li>
-
-                                                </ul>
-                                            </li>
-
-
-
-                                            <li class="level1 parent item">
-                                                <h2 class="h4"><a href="phong-bep.html"><span>Phòng bếp</span></a></h2>
-                                                <ul class="level1">
-
-                                                    <li class="level2"> <a href="tu-bep.html"><span>Tủ bếp</span></a>
-                                                    </li>
-
-                                                    <li class="level2"> <a href="ban-ghe-an.html"><span>Bàn ghế
-                                                                ăn</span></a> </li>
-
-                                                    <li class="level2"> <a href="quay-bar.html"><span>Quầy
-                                                                bar</span></a> </li>
-
-                                                    <li class="level2"> <a href="phu-kien-bep.html"><span>Phụ kiện
-                                                                bếp</span></a> </li>
-
-                                                </ul>
-                                            </li>
-
-
-
-                                            <li class="level1 item">
-                                                <h2 class="h4"><a href="phong-tre-em.html"><span>Phòng trẻ em</span></a>
-                                                </h2>
-
-
-
-                                            <li class="level1 item">
-                                                <h2 class="h4"><a href="thiet-bi-bep.html"><span>Thiết bị bếp</span></a>
-                                                </h2>
-
-
-
-                                            <li class="level1 parent item">
-                                                <h2 class="h4"><a href="thiet-bi-ve-sinh.html"><span>Thiết bị vệ
-                                                            sinh</span></a></h2>
-                                                <ul class="level1">
-
-                                                    <li class="level2"> <a href="sen-voi.html"><span>Sen vòi</span></a>
-                                                    </li>
-
-                                                    <li class="level2"> <a href="bet-ve-sinh.html"><span>Bệt vệ
-                                                                sinh</span></a> </li>
-
-                                                    <li class="level2"> <a href="chau-rua.html"><span>Chậu
-                                                                rửa</span></a> </li>
-
-                                                </ul>
-                                            </li>
-
-
-
-                                            <li class="level1 parent item">
-                                                <h2 class="h4"><a href="do-trang-tri.html"><span>Đồ trang trí</span></a>
-                                                </h2>
-                                                <ul class="level1">
-
-                                                    <li class="level2"> <a href="do-trang-tri.html"><span>Đồ trang
-                                                                trí</span></a> </li>
-
-                                                    <li class="level2"> <a href="chan-ga-goi-dem.html"><span>Chăn ga gối
-                                                                đệm</span></a> </li>
-
-                                                    <li class="level2"> <a href="ke-gia-trang-tri.html"><span>Kệ giá
-                                                                trang trí</span></a> </li>
-
-                                                    <li class="level2"> <a href="tham.html"><span>Thảm</span></a> </li>
-
-                                                </ul>
-                                            </li>
-
-
-
-                                            <li class="level1 item">
-                                                <h2 class="h4"><a href="phu-kien-bep.html"><span>Phụ kiện bếp</span></a>
-                                                </h2>
-
-
-
-                                            <li class="level1 item">
-                                                <h2 class="h4"><a href="nha-thong-minh.html"><span>Nhà thông
-                                                            minh</span></a> </h2>
-
-
-
-                                            <li class="level1 item">
-                                                <h2 class="h4"><a href="chan-ga-goi-dem.html"><span>Chăn ga gối
-                                                            đệm</span></a> </h2>
-
-
-                                            </li>
+                                            
                                         </ul>
                                     </div>
                                 </div>
@@ -437,199 +292,29 @@
 
 
                         <li class="hidden-lg hidden-md nav-item  has-dropdown">
-                            <a href="collections/all.html" class="nav-link">Sản phẩm
+                            <a href="{{route('all')}}" class="nav-link">Sản phẩm
                                 <i class="fa fa-angle-down" data-toggle="dropdown"></i></a>
 
                             <ul class="dropdown-menu">
 
-
+                            @foreach($cates as $cate)
                                 <li class="dropdown-submenu nav-item-lv2">
-                                    <a class="nav-link" href="phong-khach.html">Phòng khách <i class="fa fa-angle-down"></i></a>
+                                    <a class="nav-link" href="phong-khach.html">{{$cate->ten_loaisanpham}} <i class="fa fa-angle-down"></i></a>
 
                                     <ul class="dropdown-menu">
-
+                                        @foreach($catesCT as $catect)
+                                        @if($catect->loaisanpham_id == $cate->id)
                                         <li class="nav-item-lv3">
-                                            <a class="nav-link" href="ban-ghe-go.html">Bàn ghế gỗ</a>
+                                            <a class="nav-link" href="ban-ghe-go.html">{{$catect->ten_chitiet_loaisanpham}}</a>
                                         </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="sofa-phong-khach.html">Sofa phòng khách</a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="tu-de-giay.html">Tủ để giày</a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="tu-ruou.html">Tủ rượu</a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="vach-ngan.html">Vách ngăn</a>
-                                        </li>
+                                        @endif
+                                        @endforeach
+                                        
 
                                     </ul>
                                 </li>
+                            @endforeach
 
-
-
-                                <li class="dropdown-submenu nav-item-lv2">
-                                    <a class="nav-link" href="phong-ngu.html">Phòng ngủ <i class="fa fa-angle-down"></i></a>
-
-                                    <ul class="dropdown-menu">
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="giuong-ngu.html">Giường ngủ</a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="ke-tivi.html">Kệ tivi</a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="ban-trang-diem.html">Bàn trang điểm</a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="ban-lam-viec.html">Bàn làm việc</a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="tu-quan-ao.html">Tủ quần áo</a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-
-
-
-                                <li class="dropdown-submenu nav-item-lv2">
-                                    <a class="nav-link" href="sofa.html">Sofa <i class="fa fa-angle-down"></i></a>
-
-                                    <ul class="dropdown-menu">
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="sofa-da.html">Sofa da</a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="sofa-cafe.html">Sofa cafe</a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="sofa-giuong.html">Sofa giường</a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="sofa-phong-khach-1.html">Sofa nghỉ</a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-
-
-
-                                <li class="dropdown-submenu nav-item-lv2">
-                                    <a class="nav-link" href="phong-bep.html">Phòng bếp <i class="fa fa-angle-down"></i></a>
-
-                                    <ul class="dropdown-menu">
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="tu-bep.html">Tủ bếp</a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="ban-ghe-an.html">Bàn ghế ăn</a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="quay-bar.html">Quầy bar</a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="phu-kien-bep.html">Phụ kiện bếp</a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-
-
-
-                                <li class="nav-item-lv2">
-                                    <a class="nav-link" href="phong-tre-em.html">Phòng trẻ em</a>
-                                </li>
-
-
-
-                                <li class="nav-item-lv2">
-                                    <a class="nav-link" href="thiet-bi-bep.html">Thiết bị bếp</a>
-                                </li>
-
-
-
-                                <li class="dropdown-submenu nav-item-lv2">
-                                    <a class="nav-link" href="thiet-bi-ve-sinh.html">Thiết bị vệ sinh <i class="fa fa-angle-down"></i></a>
-
-                                    <ul class="dropdown-menu">
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="sen-voi.html">Sen vòi</a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="bet-ve-sinh.html">Bệt vệ sinh</a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="chau-rua.html">Chậu rửa</a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-
-
-
-                                <li class="dropdown-submenu nav-item-lv2">
-                                    <a class="nav-link" href="do-trang-tri.html">Đồ trang trí <i class="fa fa-angle-down"></i></a>
-
-                                    <ul class="dropdown-menu">
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="do-trang-tri.html">Đồ trang trí</a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="chan-ga-goi-dem.html">Chăn ga gối đệm</a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="ke-gia-trang-tri.html">Kệ giá trang trí</a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="tham.html">Thảm</a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-
-
-
-                                <li class="nav-item-lv2">
-                                    <a class="nav-link" href="phu-kien-bep.html">Phụ kiện bếp</a>
-                                </li>
-
-
-
-                                <li class="nav-item-lv2">
-                                    <a class="nav-link" href="nha-thong-minh.html">Nhà thông minh</a>
-                                </li>
-
-
-
-                                <li class="nav-item-lv2">
-                                    <a class="nav-link" href="chan-ga-goi-dem.html">Chăn ga gối đệm</a>
-                                </li>
 
 
 
@@ -646,7 +331,7 @@
 
 
                     </ul>
-
+                    <!--- MOBILE  MENU-->
                     <ul class="nav hidden-lg hidden-md nav-mobile">
 
 
@@ -667,7 +352,7 @@
 
 
                         <li class="nav-item">
-                            <a href="collections/all.html" class="nav-link" title="Sản phẩm">
+                            <a href="{{route('all')}}" class="nav-link" title="Sản phẩm">
                                 Sản phẩm
                             </a>
                             <span class="open-close2">
@@ -675,284 +360,30 @@
                             </span>
                             <ul class="sub-menu-1" style="display: none">
 
-
+                                @foreach($cates as $cate_mobile)
                                 <li class="dropdown-submenu nav-item-lv2">
                                     <a class="nav-link" href="phong-khach.html" title="Phòng khách">
 
-                                        <span>Phòng khách</span>
+                                        <span>{{$cate_mobile->ten_loaisanpham}}</span>
                                     </a>
                                     <span class="open-close2">
                                         <i class="fa fa-angle-down" aria-hidden="true"></i>
                                     </span>
                                     <ul class="sub-menu-2" style="display: none">
-
+                                        @foreach($catesCT as $catect_mobile)
+                                        @if($catect_mobile->loaisanpham_id == $cate_mobile->id)
                                         <li class="nav-item-lv3">
                                             <a class="nav-link" href="ban-ghe-go.html" title="Bàn ghế gỗ">
-                                                Bàn ghế gỗ
+                                            {{$catect_mobile->ten_chitiet_loaisanpham}}
                                             </a>
                                         </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="sofa-phong-khach.html" title="Sofa phòng khách">
-                                                Sofa phòng khách
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="tu-de-giay.html" title="Tủ để giày">
-                                                Tủ để giày
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="tu-ruou.html" title="Tủ rượu">
-                                                Tủ rượu
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="vach-ngan.html" title="Vách ngăn">
-                                                Vách ngăn
-                                            </a>
-                                        </li>
+                                        @endif
+                                        @endforeach
+                                       
 
                                     </ul>
                                 </li>
-
-
-
-                                <li class="dropdown-submenu nav-item-lv2">
-                                    <a class="nav-link" href="phong-ngu.html" title="Phòng ngủ">
-
-                                        <span>Phòng ngủ</span>
-                                    </a>
-                                    <span class="open-close2">
-                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </span>
-                                    <ul class="sub-menu-2" style="display: none">
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="giuong-ngu.html" title="Giường ngủ">
-                                                Giường ngủ
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="ke-tivi.html" title="Kệ tivi">
-                                                Kệ tivi
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="ban-trang-diem.html" title="Bàn trang điểm">
-                                                Bàn trang điểm
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="ban-lam-viec.html" title="Bàn làm việc">
-                                                Bàn làm việc
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="tu-quan-ao.html" title="Tủ quần áo">
-                                                Tủ quần áo
-                                            </a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-
-
-
-                                <li class="dropdown-submenu nav-item-lv2">
-                                    <a class="nav-link" href="sofa.html" title="Sofa">
-
-                                        <span>Sofa</span>
-                                    </a>
-                                    <span class="open-close2">
-                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </span>
-                                    <ul class="sub-menu-2" style="display: none">
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="sofa-da.html" title="Sofa da">
-                                                Sofa da
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="sofa-cafe.html" title="Sofa cafe">
-                                                Sofa cafe
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="sofa-giuong.html" title="Sofa giường">
-                                                Sofa giường
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="sofa-phong-khach-1.html" title="Sofa nghỉ">
-                                                Sofa nghỉ
-                                            </a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-
-
-
-                                <li class="dropdown-submenu nav-item-lv2">
-                                    <a class="nav-link" href="phong-bep.html" title="Phòng bếp">
-
-                                        <span>Phòng bếp</span>
-                                    </a>
-                                    <span class="open-close2">
-                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </span>
-                                    <ul class="sub-menu-2" style="display: none">
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="tu-bep.html" title="Tủ bếp">
-                                                Tủ bếp
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="ban-ghe-an.html" title="Bàn ghế ăn">
-                                                Bàn ghế ăn
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="quay-bar.html" title="Quầy bar">
-                                                Quầy bar
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="phu-kien-bep.html" title="Phụ kiện bếp">
-                                                Phụ kiện bếp
-                                            </a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-
-
-
-                                <li class="nav-item-lv2">
-                                    <a class="nav-link" href="phong-tre-em.html" title="Phòng trẻ em">
-                                        <span>Phòng trẻ em</span>
-                                    </a>
-                                </li>
-
-
-
-                                <li class="nav-item-lv2">
-                                    <a class="nav-link" href="thiet-bi-bep.html" title="Thiết bị bếp">
-                                        <span>Thiết bị bếp</span>
-                                    </a>
-                                </li>
-
-
-
-                                <li class="dropdown-submenu nav-item-lv2">
-                                    <a class="nav-link" href="thiet-bi-ve-sinh.html" title="Thiết bị vệ sinh">
-
-                                        <span>Thiết bị vệ sinh</span>
-                                    </a>
-                                    <span class="open-close2">
-                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </span>
-                                    <ul class="sub-menu-2" style="display: none">
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="sen-voi.html" title="Sen vòi">
-                                                Sen vòi
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="bet-ve-sinh.html" title="Bệt vệ sinh">
-                                                Bệt vệ sinh
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="chau-rua.html" title="Chậu rửa">
-                                                Chậu rửa
-                                            </a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-
-
-
-                                <li class="dropdown-submenu nav-item-lv2">
-                                    <a class="nav-link" href="do-trang-tri.html" title="Đồ trang trí">
-
-                                        <span>Đồ trang trí</span>
-                                    </a>
-                                    <span class="open-close2">
-                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </span>
-                                    <ul class="sub-menu-2" style="display: none">
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="do-trang-tri.html" title="Đồ trang trí">
-                                                Đồ trang trí
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="chan-ga-goi-dem.html" title="Chăn ga gối đệm">
-                                                Chăn ga gối đệm
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="ke-gia-trang-tri.html" title="Kệ giá trang trí">
-                                                Kệ giá trang trí
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item-lv3">
-                                            <a class="nav-link" href="tham.html" title="Thảm">
-                                                Thảm
-                                            </a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-
-
-
-                                <li class="nav-item-lv2">
-                                    <a class="nav-link" href="phu-kien-bep.html" title="Phụ kiện bếp">
-                                        <span>Phụ kiện bếp</span>
-                                    </a>
-                                </li>
-
-
-
-                                <li class="nav-item-lv2">
-                                    <a class="nav-link" href="nha-thong-minh.html" title="Nhà thông minh">
-                                        <span>Nhà thông minh</span>
-                                    </a>
-                                </li>
-
-
-
-                                <li class="nav-item-lv2">
-                                    <a class="nav-link" href="chan-ga-goi-dem.html" title="Chăn ga gối đệm">
-                                        <span>Chăn ga gối đệm</span>
-                                    </a>
-                                </li>
+                                @endforeach
 
 
                             </ul>
@@ -1004,7 +435,7 @@
     </header>
     <h1 class="hidden">Noithattamdung - </h1>
 
-
+    <br>
     <!--Content-->
     @yield('contents')
 
@@ -1012,231 +443,7 @@
 
 
 
-    {{-- Nhà thông minh
-    <section class="awe-section-9">
-        <section class="section-product-1">
-            <div class="container">
-                <div class="col-product-wrap">
-                    <div class="heading-title">
-                        <h2 class="heading-title__title"><span>Nhà</span> <span>thông minh</span></h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3 hidden-sm hidden-xs">
-                            <div class="">
-                                <a href="#">
-                                    <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/109/381/themes/819670/assets/sec_new_prod_banner.png?1640493552354" alt="alt">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-9 col-xs-12 slider-top-nav">
-
-                            <div class="owl_product_ owl-carousel" data-margin="10" data-lg-items="4" data-md-items="3" data-height="false" data-xs-items="2" data-xss-items="2" data-sm-items="3">
-
-
-
-                                <div class="item">
-                                    <div class="product-box">
-                                        <div class="product-thumbnail">
-
-                                            <a href="thiet-bi-bat-tat-den-thong-minh-sh-d2.html" title="Thiết bị Bật tắt đèn thông minh SH-D2">
-
-
-                                                <img class="lazyload pri-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/109/381/products/thongminh.jpg?v=1469673446197" alt="Thiết bị Bật tắt đèn thông minh SH-D2">
-                                                <img class="lazyload sub-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/109/381/products/thongminh-copy.jpg?v=1469673446197" alt="Thiết bị Bật tắt đèn thông minh SH-D2">
-
-
-                                            </a>
-                                        </div>
-                                        <div class="product-info a-center">
-                                            <h3 class="product-name"><a href="thiet-bi-bat-tat-den-thong-minh-sh-d2.html" title="Thiết bị Bật tắt đèn thông minh SH-D2">Thiết bị Bật tắt đèn
-                                                    thông minh SH-D2</a></h3>
-
-
-
-
-                                            <div class="price-box clearfix">
-
-                                                <div class="special-price">
-                                                    <span class="price product-price">1.350.000₫</span>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-                                        <div class="product-action clearfix hidden-md hidden-sm hidden-xs">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-3452553" enctype="multipart/form-data">
-                                                <div>
-
-                                                    <input class="hidden" type="hidden" name="variantId" value="5484473">
-                                                    <button class="btn-cart btn btn-gray  left-to" title="Tùy chọn" type="button" onclick="window.location.href='/thiet-bi-bat-tat-den-thong-minh-sh-d2'">
-                                                        Tùy chọn</button>
-
-
-                                                    <a href="thiet-bi-bat-tat-den-thong-minh-sh-d2.html" data-handle="thiet-bi-bat-tat-den-thong-minh-sh-d2" class="btn-white btn_view btn right-to quick-view">Xem nhanh</a>
-
-                                                </div>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-
-                                <div class="item">
-                                    <div class="product-box">
-                                        <div class="product-thumbnail">
-
-                                            <a href="voi-cam-ung-thong-minh-sh-f68.html" title="Vòi cảm ứng thông minh SH-F68">
-
-
-                                                <img class="lazyload pri-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/109/381/products/voi-cam-ung-sh-f66-300x300.png?v=1469641459960" alt="Vòi cảm ứng thông minh SH-F68">
-                                                <img class="lazyload sub-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/109/381/products/voi-cam-ung-lavabo-sh-f68-750x750.png?v=1469641459960" alt="Vòi cảm ứng thông minh SH-F68">
-
-
-                                            </a>
-                                        </div>
-                                        <div class="product-info a-center">
-                                            <h3 class="product-name"><a href="voi-cam-ung-thong-minh-sh-f68.html" title="Vòi cảm ứng thông minh SH-F68">Vòi cảm ứng thông minh
-                                                    SH-F68</a></h3>
-
-
-
-
-                                            <div class="price-box clearfix">
-
-                                                <div class="special-price">
-                                                    <span class="price product-price">3.200.000₫</span>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-                                        <div class="product-action clearfix hidden-md hidden-sm hidden-xs">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-3451479" enctype="multipart/form-data">
-                                                <div>
-
-                                                    <input class="hidden" type="hidden" name="variantId" value="5484516">
-                                                    <button class="btn-cart btn btn-gray  left-to" title="Tùy chọn" type="button" onclick="window.location.href='/voi-cam-ung-thong-minh-sh-f68'">
-                                                        Tùy chọn</button>
-
-
-                                                    <a href="voi-cam-ung-thong-minh-sh-f68.html" data-handle="voi-cam-ung-thong-minh-sh-f68" class="btn-white btn_view btn right-to quick-view">Xem nhanh</a>
-
-                                                </div>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-
-                                <div class="item">
-
-                                    <div class="product-box">
-                                        <div class="product-thumbnail">
-
-                                            <a href="cam-bien-chong-dot-nhap.html" title="Cảm biến chống đột nhập">
-
-
-                                                <img class="lazyload pri-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/109/381/products/tm3.jpg?v=1469641211607" alt="Cảm biến chống đột nhập">
-                                                <img class="lazyload sub-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/109/381/products/tm.jpg?v=1469641211607" alt="Cảm biến chống đột nhập">
-
-
-                                            </a>
-                                        </div>
-                                        <div class="product-info a-center">
-                                            <h3 class="product-name"><a href="cam-bien-chong-dot-nhap.html" title="Cảm biến chống đột nhập">Cảm biến chống đột nhập</a></h3>
-
-
-
-
-                                            <div class="price-box clearfix">
-
-                                                <div class="special-price">
-                                                    <span class="price product-price">4.500.000₫</span>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-                                        <div class="product-action clearfix hidden-md hidden-sm hidden-xs">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-3451477" enctype="multipart/form-data">
-                                                <div>
-
-                                                    <input class="hidden" type="hidden" name="variantId" value="5484556">
-                                                    <button class="btn-cart btn btn-gray  left-to" title="Tùy chọn" type="button" onclick="window.location.href='/cam-bien-chong-dot-nhap'">
-                                                        Tùy chọn</button>
-
-
-                                                    <a href="cam-bien-chong-dot-nhap.html" data-handle="cam-bien-chong-dot-nhap" class="btn-white btn_view btn right-to quick-view">Xem nhanh</a>
-
-                                                </div>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-
-                                <div class="item">
-
-                                    <div class="product-box">
-                                        <div class="product-thumbnail">
-
-                                            <a href="bo-dieu-khien-trung-tam.html" title="Bộ điều khiển trung tâm">
-
-
-                                                <img class="lazyload pri-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/109/381/products/3t.jpg?v=1469640592567" alt="Bộ điều khiển trung tâm">
-                                                <img class="lazyload sub-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/109/381/products/2t.jpg?v=1469640592567" alt="Bộ điều khiển trung tâm">
-
-
-                                            </a>
-                                        </div>
-                                        <div class="product-info a-center">
-                                            <h3 class="product-name"><a href="bo-dieu-khien-trung-tam.html" title="Bộ điều khiển trung tâm">Bộ điều khiển trung tâm</a></h3>
-
-
-
-
-                                            <div class="price-box clearfix">
-
-                                                <div class="special-price">
-                                                    <span class="price product-price">5.000.000₫</span>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-                                        <div class="product-action clearfix hidden-md hidden-sm hidden-xs">
-                                            <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-3451452" enctype="multipart/form-data">
-                                                <div>
-
-                                                    <input class="hidden" type="hidden" name="variantId" value="5484587">
-                                                    <button class="btn-cart btn btn-gray  left-to" title="Tùy chọn" type="button" onclick="window.location.href='/bo-dieu-khien-trung-tam'">
-                                                        Tùy chọn</button>
-
-
-                                                    <a href="bo-dieu-khien-trung-tam.html" data-handle="bo-dieu-khien-trung-tam" class="btn-white btn_view btn right-to quick-view">Xem nhanh</a>
-
-                                                </div>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
-    --}}
-
+    
 
     {{-- comment
     <section class="awe-section-10">
@@ -1348,39 +555,14 @@
             </div>
         </div>
         <script>
-            var data = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8782099357227!2d105.81180631488361!3d21.037558585993644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab1306e135ff%3A0x206f91b00da7b3ce!2zMjY2IMSQ4buZaSBD4bqlbiwgQ-G7kW5nIFbhu4ssIEJhIMSQw6xuaCwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1555408489708!5m2!1svi!2s" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>';
+            var data = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1159.898550309218!2d106.44706859712576!3d10.107894478170456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x59d49ed46c2bc6c0!2zQ-G7rWEgSMOgbmcgVHJhbmcgVHLDrSBO4buZaSBUaOG6pXQgVMOhbSBExaluZw!5e1!3m2!1svi!2s!4v1652064321774!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
             var timer = undefined;
             timer = setTimeout(() => {
                 $('.iFrameMap').html(data);
                 timer = undefined;
             }, 3000)
         </script>
-        <div class="footer-map__box">
-            <div class="footer-map__title">
-                <h2>Megashop</h2>
-                <p>Nội thất hiện đại</p>
-            </div>
-            <div class="footer-map__second">
-                <div class="footer-map__item">
-                    <div class="footer-map__icon">
-                        <i class="fa fa-map-marker"></i>
-                    </div>
-                    <p>Ladeco Building, 266 Doi Can Street, Ba Dinh District, Ha Noi</p>
-                </div>
-                <div class="footer-map__item">
-                    <div class="footer-map__icon">
-                        <i class="fa fa-envelope"></i>
-                    </div>
-                    <p><a href="mailto:support@sapo.vn">support@sapo.vn</a></p>
-                </div>
-                <div class="footer-map__item">
-                    <div class="footer-map__icon">
-                        <i class="fa fa-phone"></i>
-                    </div>
-                    <p><a href="tel:19006750">19006750</a></p>
-                </div>
-            </div>
-        </div>
+       
     </div>
 
     <div class="footer-top">
@@ -1547,17 +729,12 @@
         </div>
         
     </footer>
-    <!-- <a href="tel:0902068068" class="suntory-alo-phone suntory-alo-green" id="suntory-alo-phoneIcon" style="left: 0px; bottom: 0px;">
+    <a href="tel:0902068068" class="suntory-alo-phone suntory-alo-green" id="suntory-alo-phoneIcon" style="margin-left: 6px; margin-bottom: 80px;">
         <div class="suntory-alo-ph-circle"></div>
         <div class="suntory-alo-ph-circle-fill"></div>
         <div class="suntory-alo-ph-img-circle"><i class="fa fa-phone"></i></div>
-    </a> -->
-    <!-- Messenger Plugin chat Code -->
-    <div id="fb-root"></div>
-
-    <!-- Your Plugin chat code -->
-    <div id="fb-customer-chat" class="fb-customerchat">
-    </div>
+    </a>
+   
     <!-- Add to cart -->
     <div class="ajax-load">
         <span class="loading-icon">

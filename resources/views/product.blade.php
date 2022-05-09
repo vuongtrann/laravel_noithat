@@ -84,7 +84,7 @@
             <div class="container">
                 <div class="col-product-wrap">
                     <div class="heading-title">
-                        <h2 class="heading-title__title"><span>Sản phẩm </span> <span>nổi bật</span></h2>
+                        <h2 class="heading-title__title"><span>Sản phẩm nổi bật </span></h2>
                     </div>
                     <div class="e-tabs2 not-dqtab ajax-tab-1" data-section="ajax-tab-1">
                         <div class="content">
@@ -96,7 +96,7 @@
 
                                             <li class="tab-link tab-title  hidden-md hidden-lg current tab-titlexs" data-tab="tab-1">
 
-                                                <span><a href="">Xem Thêm</a></span>
+                                                <span><a href=""><b> Xem Thêm</b></a></span>
 
                                             </li>
 
@@ -105,7 +105,7 @@
                                         <ul class="tabs tabs-title ajax clearfix hidden-xs hidden-sm">
 
                                             <li class="tab-link has-content" data-tab="tab-1" data-url="/ban-ghe-go">
-                                                <span><a href="">Xem Thêm</a></span>
+                                                <span><a href=""><b> Xem Thêm</b></a></span>
                                             </li>
 
                                         </ul>
@@ -134,20 +134,20 @@
                                                     <div class="product-thumbnail">
 
 
-                                                        <div class="sale-flash">- 19% </div>
+                                                        <!-- <div class="sale-flash">- 19% </div> -->
 
 
-                                                        <a href="ban-lam-viec-ma-bh01.html" title="Bàn làm việc mã BH01">
+                                                        <a href="{{route('product',$pro1->id)}}" title="{{$pro1->ten_sanpham}}">
 
 
-                                                            <img class="lazyload pri-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/109/381/products/2c61a5b8e414a4f35bdb90beb72245.jpg?v=1529729377857" alt="Bàn làm việc mã BH01">
-                                                            <img class="lazyload sub-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/109/381/products/180d8db934d46492993bb5ad6eec89.jpg?v=1529729377857" alt="Bàn làm việc mã BH01">
+                                                            <img class="lazyload pri-img" src="../asset/products/{{$pro1->img_sanpham}}"  alt="{{$pro1->ten_sanpham}}">
+                                                            <img class="lazyload sub-img" src="../asset/products/{{$pro1->img_sanpham}}"  alt="{{$pro1->ten_sanpham}}">
 
 
                                                         </a>
                                                     </div>
                                                     <div class="product-info a-center">
-                                                        <h3 class="product-name"><a href="ban-lam-viec-ma-bh01.html" title="Bàn làm việc mã BH01">{{$pro1->ten_sanpham}}</a>
+                                                        <h3 class="product-name"><a href="{{route('product',$pro1->id)}}" title="{{$pro1->ten_sanpham}}">{{$pro1->ten_sanpham}}</a>
                                                         </h3>
 
 
@@ -169,12 +169,9 @@
                                                             <div>
 
                                                                 <input class="hidden" type="hidden" name="variantId" value="19206249">
-                                                                <button class="btn-cart btn btn-gray  left-to" title="Tùy chọn" type="button" onclick="window.location.href='/ban-lam-viec-ma-bh01'">
-                                                                    Tùy chọn</button>
+                                                                <a href="{{route('product',$pro1->id)}}" class="btn-cart btn btn-gray  left-to" title="Xem thêm" type="button">
+                                                                    Xem thêm</a>
 
-
-                                                                <a href="ban-lam-viec-ma-bh01.html" data-handle="ban-lam-viec-ma-bh01" class="btn-white btn_view btn right-to quick-view">Xem
-                                                                    nhanh</a>
 
                                                             </div>
                                                         </form>
@@ -244,7 +241,7 @@
 
                                             <li class="tab-link tab-title  hidden-md hidden-lg current tab-titlexs" data-tab="tab-1">
 
-                                                <span><a href="">Xem Thêm</a></span>
+                                                <span><a href=""><b> Xem Thêm</b></a></span>
 
                                             </li>
 
@@ -253,7 +250,7 @@
                                         <ul class="tabs tabs-title ajax clearfix hidden-xs hidden-sm">
 
                                             <li class="tab-link has-content" data-tab="tab-1" data-url="/ban-ghe-go">
-                                                <span><a href="">Xem Thêm</a></span>
+                                                <span><a href=""><b> Xem Thêm</b></a></span>
                                             </li>
 
                                         </ul>
@@ -283,20 +280,20 @@
                                                     <div class="product-thumbnail">
 
 
-                                                        <div class="sale-flash">- 19% </div>
+                                                        <!-- <div class="sale-flash">- 19% </div> -->
 
 
-                                                        <a href="ban-lam-viec-ma-bh01.html" title="Bàn làm việc mã BH01">
+                                                        <a href="{{route('product',$pro2->id)}}" title="{{$pro2->ten_sanpham}}">
 
 
-                                                            <img class="lazyload pri-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/109/381/products/2c61a5b8e414a4f35bdb90beb72245.jpg?v=1529729377857" alt="Bàn làm việc mã BH01">
-                                                            <img class="lazyload sub-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/109/381/products/180d8db934d46492993bb5ad6eec89.jpg?v=1529729377857" alt="Bàn làm việc mã BH01">
+                                                            <img class="lazyload pri-img" src="../asset/products/{{$pro2->img_sanpham}}" alt="{{$pro2->ten_sanpham}}">
+                                                            <img class="lazyload sub-img" src="../asset/products/{{$pro2->img_sanpham}}" alt="{{$pro2->ten_sanpham}}">
 
 
                                                         </a>
                                                     </div>
                                                     <div class="product-info a-center">
-                                                        <h3 class="product-name"><a href="ban-lam-viec-ma-bh01.html" title="Bàn làm việc mã BH01">{{$pro2->ten_sanpham}}</a>
+                                                        <h3 class="product-name"><a href="{{route('product',$pro2->id)}}" title="{{$pro2->ten_sanpham}}">{{$pro2->ten_sanpham}}</a>
                                                         </h3>
 
 
@@ -318,12 +315,9 @@
                                                             <div>
 
                                                                 <input class="hidden" type="hidden" name="variantId" value="19206249">
-                                                                <button class="btn-cart btn btn-gray  left-to" title="Tùy chọn" type="button" onclick="window.location.href='/ban-lam-viec-ma-bh01'">
-                                                                    Tùy chọn</button>
+                                                                <a href="{{route('product',$pro2->id)}}" class="btn-cart btn btn-gray  left-to" title="Xem thêm" type="button">
+                                                                    Xem thêm</a>
 
-
-                                                                <a href="ban-lam-viec-ma-bh01.html" data-handle="ban-lam-viec-ma-bh01" class="btn-white btn_view btn right-to quick-view">Xem
-                                                                    nhanh</a>
 
                                                             </div>
                                                         </form>
@@ -383,7 +377,7 @@
             <div class="container">
                 <div class="col-product-wrap">
                     <div class="heading-title">
-                        <h2 class="heading-title__title"><span>Nội thất </span> <span>phòng ngủ</span></h2>
+                        <h2 class="heading-title__title"><span>Sản phẩm </span> <span>khác</span></h2>
                     </div>
                     <div class="e-tabs2 not-dqtab ajax-tab-2" data-section="ajax-tab-2">
                         <div class="content">
@@ -395,7 +389,7 @@
 
                                             <li class="tab-link tab-title  hidden-md hidden-lg current tab-titlexs" data-tab="tab-1">
 
-                                                <span><a href="">Xem Thêm</a></span>
+                                                <span><a href=""><b> Xem Thêm</b></a></span>
 
                                             </li>
 
@@ -404,7 +398,7 @@
                                         <ul class="tabs tabs-title ajax clearfix hidden-xs hidden-sm">
 
                                             <li class="tab-link has-content" data-tab="tab-1" data-url="/ban-ghe-go">
-                                                <span><a href="">Xem Thêm</a></span>
+                                                <span><a href=""><b> Xem Thêm</b></a></span>
                                             </li>
 
                                         </ul>
@@ -434,20 +428,21 @@
                                                     <div class="product-thumbnail">
 
 
-                                                        <div class="sale-flash">- 19% </div>
+                                                        <!-- <div class="sale-flash">- 19% </div> -->
 
 
-                                                        <a href="ban-lam-viec-ma-bh01.html" title="Bàn làm việc mã BH01">
+                                                        <a href="{{route('product',$pro3->id)}}" title="{{$pro3->ten_sanpham}}">
 
 
-                                                            <img class="lazyload pri-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/109/381/products/2c61a5b8e414a4f35bdb90beb72245.jpg?v=1529729377857" alt="Bàn làm việc mã BH01">
-                                                            <img class="lazyload sub-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/medium/100/109/381/products/180d8db934d46492993bb5ad6eec89.jpg?v=1529729377857" alt="Bàn làm việc mã BH01">
+                                                           
+                                                            <img class="lazyload pri-img" src="../asset/products/{{$pro3->img_sanpham}}" alt="{{$pro3->ten_sanpham}}">
+                                                            <img class="lazyload sub-img" src="../asset/products/{{$pro3->img_sanpham}}" alt="{{$pro3->ten_sanpham}}">
 
 
                                                         </a>
                                                     </div>
                                                     <div class="product-info a-center">
-                                                        <h3 class="product-name"><a href="ban-lam-viec-ma-bh01.html" title="Bàn làm việc mã BH01">{{$pro3->ten_sanpham}}</a>
+                                                        <h3 class="product-name"><a href="{{route('product',$pro3->id)}}" title="{{$pro3->ten_sanpham}}">{{$pro3->ten_sanpham}}</a>
                                                         </h3>
 
 
@@ -469,12 +464,8 @@
                                                             <div>
 
                                                                 <input class="hidden" type="hidden" name="variantId" value="19206249">
-                                                                <button class="btn-cart btn btn-gray  left-to" title="Tùy chọn" type="button" onclick="window.location.href='/ban-lam-viec-ma-bh01'">
-                                                                    Tùy chọn</button>
-
-
-                                                                <a href="ban-lam-viec-ma-bh01.html" data-handle="ban-lam-viec-ma-bh01" class="btn-white btn_view btn right-to quick-view">Xem
-                                                                    nhanh</a>
+                                                                <a href="{{route('product',$pro3->id)}}" class="btn-cart btn btn-gray  left-to" title="Xem thêm" type="button">
+                                                                    Xem thêm</a>
 
                                                             </div>
                                                         </form>

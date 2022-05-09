@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Sanpham;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
 class ProductController extends Controller
 {
     /**
@@ -12,20 +13,77 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+   
     public function index()
     {
+        $cates= DB::table('loaisanphams')->get();
+        $catesCT = DB::table('chitiet_loaisanphams')->get();
+        //dd($cate);
+        //return view('layouts.layoutMaster');
+
         $product = DB::table('sanphams')->where('trangthai_id','=','1')->get();
         $ban_salon = DB::table('sanphams')->where('ten_sanpham','like','%ban%')->orWhere('ten_sanpham','like','%salon%')->get();
         $sanpham_khac = DB::table('sanphams')->where([['ten_sanpham','not like', '%ban%'],['ten_sanpham','not like','%salon%'],])->get();
-        //dd($khac);
-        return view('product',compact('product','ban_salon','sanpham_khac'));
+        //dd($sanpham_khac);
+        return view('product',compact('product','ban_salon','sanpham_khac','cates','catesCT'));
+        
     }
 
     public function showSingleProduct(Request $request)
     {
+        //lấy dữ liệu hiện lên menu
+        $cates= DB::table('loaisanphams')->get();
+        $catesCT = DB::table('chitiet_loaisanphams')->get();
+        //page
         $singleProductData = Sanpham::where('id',$request->id)->first();
-        return view('pages.singleProduct',compact('singleProductData'));
+        $spCungLoai= Sanpham::where('chitietloai_id',$singleProductData->chitietloai_id)->get();
+        $cotheBanThich = DB::table('sanphams')->where('trangthai_id','=','1')->limit(5)->get();
+        //dd($spCungLoai);
+        return view('pages.singleProduct',compact('singleProductData','cates','catesCT','spCungLoai','cotheBanThich'));
     }
+
+    public function showAllProduct(){
+        //lấy dữ liệu hiện lên menu
+        $cates= DB::table('loaisanphams')->get();
+        $catesCT = DB::table('chitiet_loaisanphams')->get();
+
+        $allProduct = DB::table('sanphams')->where('trangthai_id','=','1')->paginate(12);
+        //dd($allProduct);
+        return view('pages.allProduct',compact('cates','catesCT', 'allProduct'));
+    }
+
+    public function showListProduct ( Request $request){
+        $cates= DB::table('loaisanphams')->get();
+        $catesCT = DB::table('chitiet_loaisanphams')->get();
+
+        //page
+        $dataForListProduct = Sanpham::where('chitietloai_id',$request->id)->paginate(12);
+        //dd($dataForListProduct);
+        if($dataForListProduct->isEmpty()){
+            return view('pages.errors.notFound',compact('cates','catesCT'));
+        }else{
+        return view('pages.listProduct',compact('cates','catesCT','dataForListProduct'));
+        }
+    }
+
+
+    public function showListProductInCategory(Request $request){
+        $cates= DB::table('loaisanphams')->get();
+        $catesCT = DB::table('chitiet_loaisanphams')->get();
+
+        $dataForListProduct = DB::table('sanphams')
+                                ->join('chitiet_loaisanphams','sanphams.chitietloai_id','=','chitiet_loaisanphams.id')
+                                ->join('loaisanphams','chitiet_loaisanphams.loaisanpham_id','=','loaisanphams.id')
+                                ->where('loaisanphams.id',$request->id)
+                                ->paginate(12);
+        //dd($dataForListProduct);
+        if($dataForListProduct->isEmpty()){
+            return view('pages.errors.notFound',compact('cates','catesCT'));
+        }else{
+        return view('pages.listProduct',compact('cates','catesCT','dataForListProduct'));
+        }
+    }
+    
     /**
      * Show the form for creating a new resource.
      *
