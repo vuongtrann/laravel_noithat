@@ -21,6 +21,6 @@ Route::get('tat-ca-san-pham',[ProductController::class,'showAllProduct'])->name(
 
 Route::get('danh-sach-san-pham-thuoc-loai/{id}',[ProductController::class, 'showListProductInCategory'])->name('listProductInCate');// show danh sách của loại sản phẩm
 Route::get('danh-sach-san-pham-thuoc-loai./{id}',[ProductController::class, 'showListProduct'])->name('listProduct'); //show danh sách của chi tiết loại sản phẩm
-
+Route::get('ket-qua-tim-kiem',[ProductController::class,'searchResult'])->name('search');
 
 

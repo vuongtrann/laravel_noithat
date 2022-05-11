@@ -109,15 +109,16 @@
         };
     </script>
 </head>
-
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v13.0" nonce="G0vtMGAt"></script>
 <body class="body_index">
 
     <!-- Main content -->
     <header class="header">
-        <div class="topbar">
+        <!-- <div class="topbar">
             <div class="container">
                 <div class="topbar__wrap">
-                    <!-- <div class="topbar__left hidden-xs">
+                    <div class="topbar__left hidden-xs">
                         <div class="item first">
                             <span><b>Tư vấn 24/7:</b> </span>
                             <span><a href="tel:19006750">19006750</a></span>
@@ -175,10 +176,10 @@
                             </div>
                         </div>
 
-                    </div> -->
+                    </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="middle-header">
             <div class="container">
                 <div class="menu-bar hidden-md hidden-lg">
@@ -253,27 +254,24 @@
                                                 <h2 class="h4"><a href="{{route('listProductInCate',$cate->id)}}"><span>{{$cate->ten_loaisanpham}}</span></a>
                                                 </h2>
                                                 <ul class="level1">
-                                                @foreach($catesCT as $catect)
+                                                    @foreach($catesCT as $catect)
                                                     @if($catect->loaisanpham_id == $cate->id)
                                                     <li class="level2"> <a href="{{route('listProduct',$catect->id)}}"><span>{{$catect->ten_chitiet_loaisanpham}}</span></a> </li>
                                                     @endif
-                                                 @endforeach
-                                                   
+                                                    @endforeach
+
                                                 </ul>
                                             </li>
                                             @endforeach
 
 
-                                            
+
                                         </ul>
                                     </div>
                                 </div>
                             </div>
 
                         </li>
-
-                        <li class="hidden-sm hidden-xs nav-item "><a class="nav-link" href="thiet-ke-noi-that.html">Thiết kế nội thất</a></li>
-
 
                         <li class="hidden-sm hidden-xs nav-item "><a class="nav-link" href="lien-he.html">Liên hệ</a>
                         </li>
@@ -297,7 +295,7 @@
 
                             <ul class="dropdown-menu">
 
-                            @foreach($cates as $cate)
+                                @foreach($cates as $cate)
                                 <li class="dropdown-submenu nav-item-lv2">
                                     <a class="nav-link" href="phong-khach.html">{{$cate->ten_loaisanpham}} <i class="fa fa-angle-down"></i></a>
 
@@ -309,22 +307,17 @@
                                         </li>
                                         @endif
                                         @endforeach
-                                        
+
 
                                     </ul>
                                 </li>
-                            @endforeach
+                                @endforeach
 
 
 
 
                             </ul>
                         </li>
-
-
-
-                        <li class="hidden-lg hidden-md nav-item "><a class="nav-link" href="thiet-ke-noi-that.html">Thiết kế nội thất</a></li>
-
 
                         <li class="hidden-lg hidden-md nav-item "><a class="nav-link" href="lien-he.html">Liên hệ</a>
                         </li>
@@ -374,12 +367,12 @@
                                         @if($catect_mobile->loaisanpham_id == $cate_mobile->id)
                                         <li class="nav-item-lv3">
                                             <a class="nav-link" href="ban-ghe-go.html" title="Bàn ghế gỗ">
-                                            {{$catect_mobile->ten_chitiet_loaisanpham}}
+                                                {{$catect_mobile->ten_chitiet_loaisanpham}}
                                             </a>
                                         </li>
                                         @endif
                                         @endforeach
-                                       
+
 
                                     </ul>
                                 </li>
@@ -391,20 +384,7 @@
 
 
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="thiet-ke-noi-that.html" title="Thiết kế nội thất">
-                                Thiết kế nội thất
-                            </a>
-                        </li>
-
-
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="tin-tuc.html" title="Tin tức">
-                                Tin tức
-                            </a>
-                        </li>
-
+                        
 
 
                         <li class="nav-item">
@@ -419,10 +399,10 @@
                     </ul>
                     <div class="search">
                         <div class="header_search search_form">
-                            <form class="input-group search-bar search_form" action="/search" method="get" role="search">
-                                <input type="search" name="query" value="" placeholder="Tìm kiếm sản phẩm... " class="input-group-field st-default-search-input search-text" autocomplete="off">
+                            <form class="input-group search-bar search_form" action="{{route('search')}}" method="get" role="search">
+                                <input type="text" name="key" value="" placeholder="Tìm kiếm sản phẩm... " class="input-group-field st-default-search-input search-text" autocomplete="off">
                                 <span class="input-group-btn">
-                                    <button class="btn icon-fallback-text">
+                                    <button class="btn icon-fallback-text" type="submit">
                                         <i class="fa fa-search"></i>
                                     </button>
                                 </span>
@@ -443,7 +423,7 @@
 
 
 
-    
+
 
     {{-- comment
     <section class="awe-section-10">
@@ -562,71 +542,10 @@
                 timer = undefined;
             }, 3000)
         </script>
-       
+
     </div>
 
-    <div class="footer-top">
-        <div class="container">
-            <div class="footer-top__wrap">
-                <div class="footer-top__left">
-                    <span class="hidden-sm hidden-xs">Theo dõi chúng tôi</span>
-                    <ul class="inline-list social-icons">
 
-                        <li>
-                            <a class="icon-fallback-text" href="#">
-                                <span class="fa fa-twitter" aria-hidden="true"></span>
-                                <span class="fallback-text hidden">twitter</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="icon-fallback-text" href="https://www.facebook.com/sapo.vn/">
-                                <span class="fa fa-facebook" aria-hidden="true"></span>
-                                <span class="fallback-text hidden">facebook</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="icon-fallback-text" href="#">
-                                <span class="fa fa-pinterest" aria-hidden="true"></span>
-                                <span class="fallback-text hidden">pinterest</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="icon-fallback-text" href="#">
-                                <span class="fa fa-instagram" aria-hidden="true"></span>
-                                <span class="fallback-text hidden">instagram</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="icon-fallback-text" href="#">
-                                <span class="fa fa-youtube" aria-hidden="true"></span>
-                                <span class="fallback-text hidden">youtube</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="footer-top__right hidden-xs">
-                    <ul>
-
-
-                        <li><a href="index.htm" title="Trang chủ">Trang chủ</a></li>
-
-                        <li><a href="gioi-thieu.html" title="Giới thiệu">Giới thiệu</a></li>
-
-                        <li><a href="collections/all.html" title="Sản phẩm">Sản phẩm</a></li>
-
-                        <li><a href="thiet-ke-noi-that.html" title="Thiết kế nội thất">Thiết kế nội thất</a></li>
-
-                        <li><a href="tin-tuc.html" title="Tin tức">Tin tức</a></li>
-
-                        <li><a href="lien-he.html" title="Liên hệ">Liên hệ</a></li>
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
     <footer class="footer">
         <div class="site-footer">
             <div class="container">
@@ -643,55 +562,15 @@
 
                                     <li><a href="collections/all.html">Sản phẩm</a></li>
 
-                                    <li><a href="thiet-ke-noi-that.html">Thiết kế nội thất</a></li>
-
-                                    <li><a href="tin-tuc.html">Tin tức</a></li>
+                                    
 
                                     <li><a href="lien-he.html">Liên hệ</a></li>
 
                                 </ul>
                             </div>
                         </div>
-                        <div class="block block-cs col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                            <div class="footer-widget">
-                                <h4><span>Hướng dẫn</span></h4>
-                                <ul class="list-menu">
 
-                                    <li><a href="index.htm">Trang chủ</a></li>
 
-                                    <li><a href="gioi-thieu.html">Giới thiệu</a></li>
-
-                                    <li><a href="collections/all.html">Sản phẩm</a></li>
-
-                                    <li><a href="thiet-ke-noi-that.html">Thiết kế nội thất</a></li>
-
-                                    <li><a href="tin-tuc.html">Tin tức</a></li>
-
-                                    <li><a href="lien-he.html">Liên hệ</a></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="block block-cs col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                            <div class="footer-widget">
-                                <h4><span>Chính sách</span></h4>
-                                <ul class="list-menu">
-
-                                    <li><a href="index.htm">Trang chủ</a></li>
-
-                                    <li><a href="gioi-thieu.html">Giới thiệu</a></li>
-
-                                    <li><a href="collections/all.html">Sản phẩm</a></li>
-
-                                    <li><a href="thiet-ke-noi-that.html">Thiết kế nội thất</a></li>
-
-                                    <li><a href="tin-tuc.html">Tin tức</a></li>
-
-                                    <li><a href="lien-he.html">Liên hệ</a></li>
-
-                                </ul>
-                            </div>
-                        </div>
                         <div class="block block-cs col-xs-12 col-sm-6 col-md-3 col-lg-3">
                             <div class="footer-widget">
                                 <h4><span>Phương thức thanh toán</span></h4>
@@ -701,7 +580,17 @@
                                     <img src="../asset/100/109/381/themes/819670/assets/payment_3.svg" alt="paymnet3">
                                     <img src="../asset/100/109/381/themes/819670/assets/payment_4.svg" alt="paymnet4">
                                 </div>
+                                <h4><span>Chính sách </span></h4>
+                                <ul class="list-menu">
+                                    <li><a href="#">Hỗ trợ trả góp 0%</a></li>
+                                    <li><a href="#">Bảo hành tận nhà</a></li>
+                                </ul>
                             </div>
+                        </div>
+
+
+                        <div class="block block-cs col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="fb-page" data-href="https://www.facebook.com/N&#x1ed9;i-Th&#x1ea5;t-Gi&#xe1;-R&#x1ebb;-Gi&#x1ed3;ng-Tr&#xf4;m-B&#x1ebf;n-Tre-1943628925817783/" data-tabs="timeline, events, messages" data-width="500" data-height="210" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/N&#x1ed9;i-Th&#x1ea5;t-Gi&#xe1;-R&#x1ebb;-Gi&#x1ed3;ng-Tr&#xf4;m-B&#x1ebf;n-Tre-1943628925817783/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/N&#x1ed9;i-Th&#x1ea5;t-Gi&#xe1;-R&#x1ebb;-Gi&#x1ed3;ng-Tr&#xf4;m-B&#x1ebf;n-Tre-1943628925817783/">Nội Thất Giá Rẻ Giồng Trôm Bến Tre</a></blockquote></div>
                         </div>
                     </div>
                 </div>
@@ -709,54 +598,22 @@
         </div>
         <div class="copyright clearfix">
             <div class="container">
-                <div class="inner clearfix">
-                    <div class="row">
-                        <div class="col-sm-12 a-center">
-                            © Bản quyền thuộc về Megashop <span class="nc hidden-xs">|</span> <span class="cungcap">Cung
-                                cấp bởi
 
-                                <a href="https://www.sapo.vn/?utm_campaign=cpn:site_khach_hang-plm:footer&utm_source=site_khach_hang&utm_medium=referral&utm_content=fm:text_link-km:-sz:&utm_term=&campaign=site_khach_hang" rel="nofollow" title="Sapo" target="_blank">Sapo</a>
-
-                            </span>
-                        </div>
-
-                    </div>
-                </div>
 
                 <div class="back-to-top"><i class="fa  fa-arrow-circle-up"></i></div>
 
             </div>
         </div>
-        
+
     </footer>
     <a href="tel:0902068068" class="suntory-alo-phone suntory-alo-green" id="suntory-alo-phoneIcon" style="margin-left: 6px; margin-bottom: 80px;">
         <div class="suntory-alo-ph-circle"></div>
         <div class="suntory-alo-ph-circle-fill"></div>
         <div class="suntory-alo-ph-img-circle"><i class="fa fa-phone"></i></div>
     </a>
-   
+
     <!-- Add to cart -->
-    <div class="ajax-load">
-        <span class="loading-icon">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="30px" viewbox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-                <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
-                    <animate attributename="opacity" attributetype="XML" values="0.2; 1; .2" begin="0s" dur="0.6s" repeatcount="indefinite"></animate>
-                    <animate attributename="height" attributetype="XML" values="10; 20; 10" begin="0s" dur="0.6s" repeatcount="indefinite"></animate>
-                    <animate attributename="y" attributetype="XML" values="10; 5; 10" begin="0s" dur="0.6s" repeatcount="indefinite"></animate>
-                </rect>
-                <rect x="8" y="10" width="4" height="10" fill="#333" opacity="0.2">
-                    <animate attributename="opacity" attributetype="XML" values="0.2; 1; .2" begin="0.15s" dur="0.6s" repeatcount="indefinite"></animate>
-                    <animate attributename="height" attributetype="XML" values="10; 20; 10" begin="0.15s" dur="0.6s" repeatcount="indefinite"></animate>
-                    <animate attributename="y" attributetype="XML" values="10; 5; 10" begin="0.15s" dur="0.6s" repeatcount="indefinite"></animate>
-                </rect>
-                <rect x="16" y="10" width="4" height="10" fill="#333" opacity="0.2">
-                    <animate attributename="opacity" attributetype="XML" values="0.2; 1; .2" begin="0.3s" dur="0.6s" repeatcount="indefinite"></animate>
-                    <animate attributename="height" attributetype="XML" values="10; 20; 10" begin="0.3s" dur="0.6s" repeatcount="indefinite"></animate>
-                    <animate attributename="y" attributetype="XML" values="10; 5; 10" begin="0.3s" dur="0.6s" repeatcount="indefinite"></animate>
-                </rect>
-            </svg>
-        </span>
-    </div>
+
 
     <div class="loading awe-popup">
         <div class="overlay"></div>

@@ -25,7 +25,7 @@ class ProductController extends Controller
         $ban_salon = DB::table('sanphams')->where('ten_sanpham','like','%ban%')->orWhere('ten_sanpham','like','%salon%')->get();
         $sanpham_khac = DB::table('sanphams')->where([['ten_sanpham','not like', '%ban%'],['ten_sanpham','not like','%salon%'],])->get();
         //dd($sanpham_khac);
-        return view('product',compact('product','ban_salon','sanpham_khac','cates','catesCT'));
+        return view('user.product',compact('product','ban_salon','sanpham_khac','cates','catesCT'));
         
     }
 
@@ -39,7 +39,7 @@ class ProductController extends Controller
         $spCungLoai= Sanpham::where('chitietloai_id',$singleProductData->chitietloai_id)->get();
         $cotheBanThich = DB::table('sanphams')->where('trangthai_id','=','1')->limit(5)->get();
         //dd($spCungLoai);
-        return view('pages.singleProduct',compact('singleProductData','cates','catesCT','spCungLoai','cotheBanThich'));
+        return view('user.pages.singleProduct',compact('singleProductData','cates','catesCT','spCungLoai','cotheBanThich'));
     }
 
     public function showAllProduct(){
@@ -49,7 +49,7 @@ class ProductController extends Controller
 
         $allProduct = DB::table('sanphams')->where('trangthai_id','=','1')->paginate(12);
         //dd($allProduct);
-        return view('pages.allProduct',compact('cates','catesCT', 'allProduct'));
+        return view('user.pages.allProduct',compact('cates','catesCT', 'allProduct'));
     }
 
     public function showListProduct ( Request $request){
@@ -60,9 +60,9 @@ class ProductController extends Controller
         $dataForListProduct = Sanpham::where('chitietloai_id',$request->id)->paginate(12);
         //dd($dataForListProduct);
         if($dataForListProduct->isEmpty()){
-            return view('pages.errors.notFound',compact('cates','catesCT'));
+            return view('user.pages.errors.notFound',compact('cates','catesCT'));
         }else{
-        return view('pages.listProduct',compact('cates','catesCT','dataForListProduct'));
+        return view('user.pages.listProduct',compact('cates','catesCT','dataForListProduct'));
         }
     }
 
@@ -78,9 +78,22 @@ class ProductController extends Controller
                                 ->paginate(12);
         //dd($dataForListProduct);
         if($dataForListProduct->isEmpty()){
-            return view('pages.errors.notFound',compact('cates','catesCT'));
+            return view('user.pages.errors.notFound',compact('cates','catesCT'));
         }else{
-        return view('pages.listProduct',compact('cates','catesCT','dataForListProduct'));
+        return view('user.pages.listProduct',compact('cates','catesCT','dataForListProduct'));
+        }
+    }
+
+
+    public function searchResult(Request $request){
+        $cates= DB::table('loaisanphams')->get();
+        $catesCT = DB::table('chitiet_loaisanphams')->get();
+
+        $result = DB::table('sanphams')->where('ten_sanpham','like','%'.$request->key.'%')->paginate(12);
+        if($result->isEmpty()){
+            return view('user.pages.errors.notFound',compact('cates','catesCT'));
+        }else{
+        return view('user.pages.searchResult',compact('cates','catesCT','result'));
         }
     }
     

@@ -1,4 +1,4 @@
-@extends('layouts.layoutMaster')
+@extends('user.layouts.layoutMaster')
 @section('styles')
 @endsection
 @section('contents')
@@ -138,7 +138,7 @@
                     </div>
                     <div class="text-xs-right">
 
-                        {{ $allProduct->links('pages.pagination.customPagination') }}
+                        {{ $allProduct->links('user.pages.pagination.customPagination') }}
 
                     </div>
 

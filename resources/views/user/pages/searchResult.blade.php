@@ -1,4 +1,4 @@
-@extends('layouts.layoutMaster')
+@extends('user.layouts.layoutMaster')
 @section('styles')
 @endsection
 @section('contents')
@@ -75,9 +75,9 @@
                 <section class="products-view products-view-grid">
                     <div class="row">
 
-                        @if(isset($dataForListProduct))
+                        @if(isset($result))
 
-                        @foreach($dataForListProduct as $pro1 )
+                        @foreach($result as $pro1 )
                         <div class="col-xs-6 col-sm-4 col-lg-4">
 
 
@@ -138,7 +138,7 @@
                     
                     <div class="text-xs-right">
 
-                        {{ $dataForListProduct->links('pages.pagination.customPagination') }}
+                        {{ $result->links('user.pages.pagination.customPagination') }}
 
                     </div>
 

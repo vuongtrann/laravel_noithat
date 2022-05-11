@@ -1,4 +1,4 @@
-@extends('layouts.layoutMaster')
+@extends('user.layouts.layoutMaster')
 @section('styles')
 @endsection
 @section('contents')
@@ -141,9 +141,9 @@
 										<div class="callphoneicon">
 											<i class="fa fa-phone"></i>
 										</div>
-										<a href="tel:0968580776">
+										<a href="tel:0902560665">
 											đặt mua qua điện thoại (7h00 - 21h00)<br>
-											<span>0968580776</span>
+											<span>0902560665</span>
 										</a>
 									</div>
 								</form>
@@ -286,6 +286,7 @@
 												</a>
 											</div>
 											<div class="product-info a-left">
+												
 												<h3 class="product-name"><a href="{{route('product',$ctbt->id)}}"
 														title="{{$ctbt->ten_sanpham}}">{{$ctbt->ten_sanpham}}</a></h3>
 
