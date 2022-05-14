@@ -14,8 +14,11 @@ class NhanvienSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('nhanviens')->insert([
-            ['id'=>'admin','ten_nhanvien'=>'Quản trị viên','matkhau'=>'admin123'],
+        DB::table('users')->insert([
+            ['id'=>'1','name'=>'Vương Trần','email'=>'vuongtran@noithatgiongtrom.com','password'=>bcrypt('0968580776')],
+            ['id'=>'2','name'=>'Tuyến Nguyễn','email'=>'tuyennguyen@noithatgiongtrom.com','password'=>bcrypt('0902560665')],
+            ['id'=>'3','name'=>'Tiến Lê','email'=>'tienle@noithatgiongtrom.com','password'=>bcrypt('0902560665')],
+            ['id'=>'4','name'=>'admin','email'=>'admin@noithatgiongtrom.com','password'=>bcrypt('0968580776')],
         ]);
     }
 }

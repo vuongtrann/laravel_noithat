@@ -1,4 +1,4 @@
-@extends('layouts.layoutMaster')
+@extends('user.layouts.layoutMaster')
 @section('styles')
 @endsection
 @section('contents')

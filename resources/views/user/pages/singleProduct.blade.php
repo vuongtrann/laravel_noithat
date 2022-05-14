@@ -19,13 +19,15 @@
 
 
 						<li>
-							<a itemprop="url" href="giuong-ngu.html" title="Giường ngủ"><span itemprop="title">
-								@foreach($catesCT as $subcat)
+							@foreach($catesCT as $subcat)
+							<a itemprop="url" href="{{route('listProduct',$subcat->id)}}" title="Giường ngủ"><span itemprop="title">
+								
 								@if($subcat->id == $singleProductData->chitietloai_id)
 								{{$subcat->ten_chitiet_loaisanpham}}
 								@endif
-								@endforeach
+								
 							</span></a>
+							@endforeach
 							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 						</li>
 
@@ -122,7 +124,7 @@
 							</div>
 
 							<div class="form-product">
-								<form enctype="multipart/form-data" id="add-to-cart-form" action="/cart/add"
+								<form enctype="multipart/form-data" id="add-to-cart-form" action="tel:0968580776"
 									method="post" class="form-inline">
 									
 
@@ -322,7 +324,7 @@
 
 					<div class="related-product">
 						<div class="heading-title">
-							<h2 class="heading-title__title"><a href="giuong-ngu.html">SẢN PHẨM CÙNG LOẠI</a></h2>
+							<h2 class="heading-title__title"><a href="">SẢN PHẨM CÙNG LOẠI</a></h2>
 						</div>
 						<div class="products  owl-carousel owl-theme products-view-grid" data-lg-items="4"
 							data-md-items="4" data-sm-items="3" data-xs-items="2" data-xss-items="2" data-margin="10">

@@ -96,7 +96,12 @@ class ProductController extends Controller
         return view('user.pages.searchResult',compact('cates','catesCT','result'));
         }
     }
-    
+    public function lienhe(){
+        $cates= DB::table('loaisanphams')->get();
+        $catesCT = DB::table('chitiet_loaisanphams')->get();
+
+        return view('user.pages.lienhe',compact('cates','catesCT'));
+    }
     /**
      * Show the form for creating a new resource.
      *

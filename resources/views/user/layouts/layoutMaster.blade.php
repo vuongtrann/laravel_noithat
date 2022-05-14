@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <!-- ================= Meta ================== -->
 
-    <meta name="keywords" content="awesome-team, awesome theme, theme bizweb dep, theme responsive, overpowered, DKT, BIZWEB">
+    <meta name="keywords" content="nội thất, nội thất giồng trôm, noi that giong trom, noi that tam dung, noi that gia re, noi that, nội thất giá rẽ, nội thất đẹp">
 
     <link rel="canonical" href="/">
     <meta name='revisit-after' content='1 days'>
@@ -25,8 +25,8 @@
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Megashop">
-    <meta property="og:image" content="../asset/100/109/381/themes/819670/assets/logo.png">
-    <meta property="og:image:secure_url" content="../asset/100/109/381/themes/819670/assets/logo.png">
+    <meta property="og:image" content="../asset/image/logo/minilogo.png">
+    <meta property="og:image:secure_url" content="../asset/image/logo/minilogo.png">
 
     <meta property="og:description" content="">
     <!-- <meta property="og:url" content="https://megashop-1.mysapo.net/"> -->
@@ -35,27 +35,27 @@
     <script>
         var template = 'index';
     </script>
-    <link rel="preload" href="../asset/100/109/381/themes/819670/assets/plugin.scss.css" as="style">
-    <link rel="preload" href="../asset/100/109/381/themes/819670/assets/bootstrap.css" as="style">
-    <link rel="preload" href="../asset/100/109/381/themes/819670/assets/owl.carousel.min.css" as="style">
-    <link rel="preload" href="../asset/100/109/381/themes/819670/assets/base.scss.css" as="style">
-    <link rel="preload" href="../asset/100/109/381/themes/819670/assets/style.scss.css" as="style">
-    <link rel="preload" href="../asset/100/109/381/themes/819670/assets/update.scss.css" as="style">
-    <link href="../asset/100/109/381/themes/819670/assets/plugin.scss.css" rel="stylesheet" type="text/css">
-    <link href="../asset/100/109/381/themes/819670/assets/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="../asset/100/109/381/themes/819670/assets/owl.carousel.min.css" rel="stylesheet" type="text/css">
-    <link href="../asset/100/109/381/themes/819670/assets/base.scss.css" rel="stylesheet" type="text/css">
-    <link href="../asset/100/109/381/themes/819670/assets/style.scss.css" rel="stylesheet" type="text/css">
-    <link href="../asset/100/109/381/themes/819670/assets/update.scss.css" rel="stylesheet" type="text/css">
+    <link rel="preload" href="../asset/noithat/css/plugin.scss.css" as="style">
+    <link rel="preload" href="../asset/noithat/css/bootstrap.css" as="style">
+    <link rel="preload" href="../asset/noithat/css/owl.carousel.min.css" as="style">
+    <link rel="preload" href="../asset/noithat/css/base.scss.css" as="style">
+    <link rel="preload" href="../asset/noithat/css/style.scss.css" as="style">
+    <link rel="preload" href="../asset/noithat/css/update.scss.css" as="style">
+    <link href="../asset/noithat/css/plugin.scss.css" rel="stylesheet" type="text/css">
+    <link href="../asset/noithat/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="../asset/noithat/css/owl.carousel.min.css" rel="stylesheet" type="text/css">
+    <link href="../asset/noithat/css/base.scss.css" rel="stylesheet" type="text/css">
+    <link href="../asset/noithat/css/style.scss.css" rel="stylesheet" type="text/css">
+    <link href="../asset/noithat/css/update.scss.css" rel="stylesheet" type="text/css">
 
-    <link rel="preload" href="../asset/100/109/381/themes/819670/assets/module.scss.css" as="style">
-    <link href="../asset/100/109/381/themes/819670/assets/module.scss.css" rel="stylesheet" type="text/css">
+    <link rel="preload" href="../asset/noithat/css/module.scss.css" as="style">
+    <link href="../asset/noithat/css/module.scss.css" rel="stylesheet" type="text/css">
 
-    <link rel="preload" href="../asset/100/109/381/themes/819670/assets/responsive.scss.css" as="style">
-    <link href="../asset/100/109/381/themes/819670/assets/responsive.scss.css" rel="stylesheet" type="text/css">
+    <link rel="preload" href="../asset/noithat/css/responsive.scss.css" as="style">
+    <link href="../asset/noithat/css/responsive.scss.css" rel="stylesheet" type="text/css">
 
-    <script src="../asset/100/109/381/themes/819670/assets/jquery-2.2.3.js" type="text/javascript"></script>
-    <script src="../asset/100/109/381/themes/819670/assets/jqueryvalidate.js" type="text/javascript"></script>
+    <script src="../asset/noithat/js/jquery-2.2.3.js" type="text/javascript"></script>
+    <script src="../asset/noithat/js/jqueryvalidate.js" type="text/javascript"></script>
     <script>
         var Bizweb = Bizweb || {};
         Bizweb.store = 'megashop-1.mysapo.net';
@@ -70,7 +70,7 @@
     <script>
         (function() {
             function asyncLoad() {
-                var urls = ["../asset/100/109/381/themes/819670/assets/productreviews.min.js"];
+                var urls = ["../asset/noithat/js/productreviews.min.js"];
                 for (var i = 0; i < urls.length; i++) {
                     var s = document.createElement('script');
                     s.type = 'text/javascript';
@@ -99,7 +99,7 @@
     </script>
 
 
-    <script src="../asset/dist/js/stats.min.js"></script>
+    <script src="../asset/noithat/js/stats.min.js"></script>
 
 
     <script>
@@ -183,7 +183,7 @@
         <div class="middle-header">
             <div class="container">
                 <div class="menu-bar hidden-md hidden-lg">
-                    <img src="../asset/100/109/381/themes/819670/assets/menu-bar.png" alt="menu bar">
+                    <img src="../asset/image/icon/menu-bar.png" alt="menu bar">
                 </div>
 
                 <div class="header-main">
@@ -203,7 +203,7 @@
                                     <div class="row">
                                         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ser">
                                             <div class="section_service__wrap">
-                                                <span class="section_service__icon"><img src="../asset/100/109/381/themes/819670/assets/service_icon_1.png" alt="Tư vấn 24/7 miễn phí"></span>
+                                                <span class="section_service__icon"><img src="../asset/image/icon/service_icon_1.png" alt="Tư vấn 24/7 miễn phí"></span>
                                                 <div class="section_service__content">
                                                     <p class="section_service__text">Tư vấn<span>miễn phí</span>
                                                     </p>
@@ -212,7 +212,7 @@
                                         </div>
                                         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ser">
                                             <div class="section_service__wrap">
-                                                <span class="section_service__icon"><img src="../asset/100/109/381/themes/819670/assets/service_icon_2.png" alt="Vận chuyển miễn phí"></span>
+                                                <span class="section_service__icon"><img src="../asset/image/icon/service_icon_2.png" alt="Vận chuyển miễn phí"></span>
                                                 <div class="section_service__content">
                                                     <p class="section_service__text">Vận chuyển<span>miễn phí</span></p>
                                                 </div>
@@ -220,7 +220,7 @@
                                         </div>
                                         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ser">
                                             <div class="section_service__wrap">
-                                                <span class="section_service__icon"><img src="../asset/100/109/381/themes/819670/assets/service_icon_3.png" alt="Nhận hàng nhận tiền"></span>
+                                                <span class="section_service__icon"><img src="../asset/image/icon/service_icon_3.png" alt="Nhận hàng nhận tiền"></span>
                                                 <div class="section_service__content">
                                                     <p class="section_service__text">Hỗ trợ<span>trả góp</span></p>
                                                 </div>
@@ -239,7 +239,7 @@
             <div class="container">
                 <nav>
                     <ul id="nav" class="nav hidden-sm hidden-xs">
-                        <li class="hidden-sm hidden-xs nav-item active"><a class="nav-link" href="index.html">Trang chủ</a></li>
+                        <li class="hidden-sm hidden-xs nav-item active"><a class="nav-link" href="/">Trang chủ</a></li>
                         <li class="hidden-sm hidden-xs nav-item "><a class="nav-link" href="">Giới thiệu</a></li>
                         <li class="hidden-sm hidden-xs nav-item  has-mega has-dropdown">
                             <a href="{{route('all')}}" class="nav-link">Sản phẩm <i class="fa fa-angle-down" data-toggle="dropdown"></i></a>
@@ -273,13 +273,13 @@
 
                         </li>
 
-                        <li class="hidden-sm hidden-xs nav-item "><a class="nav-link" href="lien-he.html">Liên hệ</a>
+                        <li class="hidden-sm hidden-xs nav-item "><a class="nav-link" href="{{route('lienhe')}}">Liên hệ</a>
                         </li>
 
                         <!-- menu mobile -->
 
 
-                        <li class="hidden-lg hidden-md nav-item active"><a class="nav-link" href="index.html">Trang
+                        <li class="hidden-lg hidden-md nav-item active"><a class="nav-link" href="/">Trang
                                 chủ</a></li>
 
 
@@ -297,13 +297,13 @@
 
                                 @foreach($cates as $cate)
                                 <li class="dropdown-submenu nav-item-lv2">
-                                    <a class="nav-link" href="phong-khach.html">{{$cate->ten_loaisanpham}} <i class="fa fa-angle-down"></i></a>
+                                    <a class="nav-link" href="{{route('listProductInCate',$cate->id)}}">{{$cate->ten_loaisanpham}} <i class="fa fa-angle-down"></i></a>
 
                                     <ul class="dropdown-menu">
                                         @foreach($catesCT as $catect)
                                         @if($catect->loaisanpham_id == $cate->id)
                                         <li class="nav-item-lv3">
-                                            <a class="nav-link" href="ban-ghe-go.html">{{$catect->ten_chitiet_loaisanpham}}</a>
+                                            <a class="nav-link" href="{{route('listProduct',$catect->id)}}">{{$catect->ten_chitiet_loaisanpham}}</a>
                                         </li>
                                         @endif
                                         @endforeach
@@ -319,7 +319,7 @@
                             </ul>
                         </li>
 
-                        <li class="hidden-lg hidden-md nav-item "><a class="nav-link" href="lien-he.html">Liên hệ</a>
+                        <li class="hidden-lg hidden-md nav-item "><a class="nav-link" href="{{route('lienhe')}}">Liên hệ</a>
                         </li>
 
 
@@ -329,7 +329,7 @@
 
 
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html" title="Trang chủ">
+                            <a class="nav-link" href="/" title="Trang chủ">
                                 Trang chủ
                             </a>
                         </li>
@@ -337,7 +337,7 @@
 
 
                         <li class="nav-item">
-                            <a class="nav-link" href="gioi-thieu.html" title="Giới thiệu">
+                            <a class="nav-link" href="" title="Giới thiệu">
                                 Giới thiệu
                             </a>
                         </li>
@@ -355,7 +355,7 @@
 
                                 @foreach($cates as $cate_mobile)
                                 <li class="dropdown-submenu nav-item-lv2">
-                                    <a class="nav-link" href="phong-khach.html" title="Phòng khách">
+                                    <a class="nav-link" href="{{route('listProductInCate',$cate_mobile->id)}}" title="Phòng khách">
 
                                         <span>{{$cate_mobile->ten_loaisanpham}}</span>
                                     </a>
@@ -366,7 +366,7 @@
                                         @foreach($catesCT as $catect_mobile)
                                         @if($catect_mobile->loaisanpham_id == $cate_mobile->id)
                                         <li class="nav-item-lv3">
-                                            <a class="nav-link" href="ban-ghe-go.html" title="Bàn ghế gỗ">
+                                            <a class="nav-link" href="{{route('listProduct',$catect_mobile->id)}}" title="Bàn ghế gỗ">
                                                 {{$catect_mobile->ten_chitiet_loaisanpham}}
                                             </a>
                                         </li>
@@ -388,7 +388,7 @@
 
 
                         <li class="nav-item">
-                            <a class="nav-link" href="lien-he.html" title="Liên hệ">
+                            <a class="nav-link" href="{{route('lienhe')}}" title="Liên hệ">
                                 Liên hệ
                             </a>
                         </li>
@@ -415,7 +415,6 @@
     </header>
     <h1 class="hidden">Noithattamdung - </h1>
 
-    <br>
     <!--Content-->
     @yield('contents')
 
@@ -426,7 +425,7 @@
 
 
     {{-- comment
-    <section class="awe-section-10">
+    <!-- <section class="awe-section-10">
         <div class="sec-testimonial">
             <div class="container">
                 <div class="col-lg-8 col-md-8 col-lg-offset-2 col-md-offset-2">
@@ -523,10 +522,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     --}}
 
-    <link href="../asset/100/109/381/themes/819670/assets/bpr-products-module.css" rel="stylesheet" type="text/css">
+    <link href="../asset/noithat/css/bpr-products-module.css" rel="stylesheet" type="text/css">
     <div class="sapo-product-reviews-module"></div>
 
     <div class="footer-map" style="min-height: 400px;">
@@ -556,11 +555,11 @@
                                 <h4><span>Thông tin</span></h4>
                                 <ul class="list-menu">
 
-                                    <li><a href="index.htm">Trang chủ</a></li>
+                                    <li><a href="/">Trang chủ</a></li>
 
                                     <li><a href="gioi-thieu.html">Giới thiệu</a></li>
 
-                                    <li><a href="collections/all.html">Sản phẩm</a></li>
+                                    <li><a href="{{route('all')}}">Sản phẩm</a></li>
 
                                     
 
@@ -575,10 +574,10 @@
                             <div class="footer-widget">
                                 <h4><span>Phương thức thanh toán</span></h4>
                                 <div>
-                                    <img src="../asset/100/109/381/themes/819670/assets/payment_1.svg" alt="paymnet1">
-                                    <img src="../asset/100/109/381/themes/819670/assets/payment_2.svg" alt="paymnet2">
-                                    <img src="../asset/100/109/381/themes/819670/assets/payment_3.svg" alt="paymnet3">
-                                    <img src="../asset/100/109/381/themes/819670/assets/payment_4.svg" alt="paymnet4">
+                                    <img src="../asset/image/icon/payment_1.svg" alt="paymnet1">
+                                    <img src="../asset/image/icon/payment_2.svg" alt="paymnet2">
+                                    <img src="../asset/image/icon/payment_3.svg" alt="paymnet3">
+                                    <img src="../asset/image/icon/payment_4.svg" alt="paymnet4">
                                 </div>
                                 <h4><span>Chính sách </span></h4>
                                 <ul class="list-menu">
@@ -699,108 +698,14 @@
 
 
     <!-- Main JS -->
-    <link rel="preload" as="script" href="../asset/100/109/381/themes/819670/assets/main.js">
-    <script src="../asset/100/109/381/themes/819670/assets/main.js" type="text/javascript"></script>
+    <link rel="preload" as="script" href="../asset/noithat/js/main.js">
+    <script src="../asset/noithat/js/main.js" type="text/javascript"></script>
 
 
-    <!-- Product detail JS,CSS -->
-    <!-- Quick view -->
-
-    <!-- 
-	<div id="quick-view-product" class="quickview-product" style="display:none;">
-		<div class="quickview-overlay fancybox-overlay fancybox-overlay-fixed"></div>
-		<div class="quick-view-product"></div>
-		<div id="quickview-modal" style="display:none;">
-			<div class="block-quickview primary_block row">
-				<div class="product-left-column col-xs-12 col-sm-5 col-md-5 col-lg-5">
-					<div class="clearfix image-block">
-						<span class="view_full_size">
-							<a class="img-product" title="" href="#">
-								<img id="product-featured-image-quickview"
-									class="img-responsive product-featured-image-quickview"
-									src="asset/100/109/381/themes/819670/assets/logo.png" alt="quickview">
-							</a>
-						</span>
-						<div class="loading-imgquickview" style="display:none;"></div>
-					</div>
-					<div class="more-view-wrapper clearfix">
-						<div class="thumbs_quickview" id="thumbs_list_quickview">
-							<ul class="product-photo-thumbs quickview-more-views-owlslider" id="thumblist_quickview">
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="product-center-column product-info product-item col-xs-5 col-sm-7 col-md-7 col-lg-7">
-					<div class="head-qv">
-						<h3 class="qwp-name">abc</h3>
-						<div class="vend-qv">
-							<div class="left_vend">
-								<span class="vendor_"></span>
-								<span class="line">|</span>
-								Tình trạng: <span class="soluong"></span>
-							</div>
-
-						</div>
-					</div>
-					<div class="quickview-info">
-
-						<span class="prices">
-							<span class="price"></span>
-							<del class="old-price"></del>
-						</span>
-					</div>
-					<div class="product-description">
-						<div class="rte text2line">
-
-						</div>
-
-					</div>
-
-					<form action="/cart/add" method="post" enctype="multipart/form-data"
-						class="quick_option variants form-ajaxtocart">
-						<span class="price-product-detail hidden" style="opacity: 0;">
-							<span class=""></span>
-						</span>
-						<select name='variantId' class="hidden" style="display:none"></select>
-						<div class="clearfix"></div>
-						<div class="quantity_wanted_p">
-							<div class="input_qty_qv">
-								<a class="btn_num num_1 button button_qty"
-									onclick="var result = document.getElementById('quantity-detail'); var qtyqv = result.value; if( !isNaN( qtyqv ) &amp;&amp; qtyqv &gt; 1) result.value--;return false;">-</a>
-								<input type="text" id="quantity-detail" name="quantity" value="1"
-									onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;"
-									onchange="if(this.value == 0)this.value=1;" class="form-control prd_quantity">
-								<a class="btn_num num_2 button button_qty"
-									onclick="var result = document.getElementById('quantity-detail'); var qtyqv = result.value; if( !isNaN( qtyqv )) result.value++;return false;">+</a>
-							</div>
-
-							<div class="button_actions">
-								<button type="submit"
-									class="btn btn-lg fix_add_to_cart  btn-cart button_cart_buy_enable add_to_cart btn_buy add_to_cart_detail ajax_addtocart"
-									title="Mua hàng">
-									<span class="btn-content">Mua hàng</span>
-								</button>
-							</div>
-						</div>
-						<div class="total-price" style="display:none">
-							<label>Tổng cộng: </label>
-							<span></span>
-						</div>
-
-					</form>
+   
 
 
-				</div>
-
-			</div>
-			<a title="Close" class="quickview-close close-window" href="javascript:;">
-				<i class="fa fa-times" aria-hidden="true"></i>
-			</a>
-		</div>
-	</div> -->
-
-
-    <script src="../asset/100/109/381/themes/819670/assets/quickview.js" type="text/javascript"></script>
+    <script src="../asset/noithat/js/quickview.js" type="text/javascript"></script>
     @yield('scripts')
 </body>
 

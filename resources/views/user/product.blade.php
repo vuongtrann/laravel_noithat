@@ -3,32 +3,30 @@
 @endsection
 @section('contents')
 
-
-
     <section class="awe-section-1">
         <div class="container">
             <div class="home-slider owl-carousel" data-lg-items='1' data-md-items='1' data-sm-items='1' data-xs-items="1" data-margin='0' data-dot="false" data-nav="true" data-loop="true">
                 <div class="item">
                     <a href="#" class="clearfix">
                         <picture>
-                            <source media="(max-width: 480px)" srcset="asset/thumb/large/100/109/381/themes/819670/assets/slider_1.jpg">
-                            <img class="img-responsive center-block basic" src="asset/100/109/381/themes/819670/assets/slider_1.jpg" alt="New Collection" style="width: 100%;">
+                            <source media="(max-width: 480px)" srcset="asset/image/banner/1.jpg">
+                            <img class="img-responsive center-block basic" src="asset/image/banner/1.jpg" alt="New Collection" style="width: 100%; max-height: 500px">
                         </picture>
                     </a>
                 </div>
                 <div class="item">
                     <a href="#" class="clearfix">
                         <picture>
-                            <source media="(max-width: 480px)" srcset="asset/thumb/large/100/109/381/themes/819670/assets/slider_2.jpg">
-                            <img class="img-responsive center-block basic" src="asset/100/109/381/themes/819670/assets/slider_2.jpg" alt="New Collection" style="width: 100%;">
+                            <source media="(max-width: 480px)" srcset="asset/image/banner/2.jpg">
+                            <img class="img-responsive center-block basic" src="asset/image/banner/2.jpg" alt="New Collection" style="width: 100%; max-height: 500px">
                         </picture>
                     </a>
                 </div>
                 <div class="item">
                     <a href="" class="clearfix">
                         <picture>
-                            <source media="(max-width: 480px)" srcset="asset/thumb/large/100/109/381/themes/819670/assets/slider_3.jpg">
-                            <img class="img-responsive center-block basic" src="asset/100/109/381/themes/819670/assets/slider_3.jpg" alt="" style="width: 100%;">
+                            <source media="(max-width: 480px)" srcset="asset/image/banner/3.jpg">
+                            <img class="img-responsive center-block basic" src="asset/image/banner/3.jpg" alt="" style="width: 100%; max-height: 500px">
                         </picture>
                     </a>
                 </div>
@@ -39,41 +37,7 @@
 
 
 
-    <section class="awe-section-2">
-        <section class="section_banner hidden-xs">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <a href="#" class="banner">
-                            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/109/381/themes/819670/assets/sec_banner_1.png?1640493552354" alt="banner 01">
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-
-
-
-
-                        <a href="#" class="banner banner-center">
-                            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/109/381/themes/819670/assets/sec_banner_center_1.png?1640493552354" alt="banner 01">
-                        </a>
-
-
-
-
-                        <a href="#" class="banner banner-center">
-                            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/109/381/themes/819670/assets/sec_banner_center_2.png?1640493552354" alt="banner 01">
-                        </a>
-
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <a href="#" class="banner">
-                            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/109/381/themes/819670/assets/sec_banner_2.png?1640493552354" alt="Banner 02">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
+   
 
 
 
@@ -140,7 +104,7 @@
                                                         <a href="{{route('product',$pro1->id)}}" title="{{$pro1->ten_sanpham}}">
 
 
-                                                            <img class="lazyload pri-img" src="../asset/products/{{$pro1->img_sanpham}}"  alt="{{$pro1->ten_sanpham}}">
+                                                            <img class="lazyload pri-img" src="../asset/products/{{$pro1->img_sanpham}}"  alt="{{$pro1->ten_sanpham}}" >
                                                             <img class="lazyload sub-img" src="../asset/products/{{$pro1->img_sanpham}}"  alt="{{$pro1->ten_sanpham}}">
 
 
@@ -150,15 +114,10 @@
                                                         <h3 class="product-name"><a href="{{route('product',$pro1->id)}}" title="{{$pro1->ten_sanpham}}">{{$pro1->ten_sanpham}}</a>
                                                         </h3>
 
-
-
-
                                                         <div class="price-box clearfix">
                                                             <div class="special-price">
                                                                 <span class="price product-price">{{$pro1->gia_sanpham}}</span>
                                                             </div>
-
-                                                            
 
                                                         </div>
 

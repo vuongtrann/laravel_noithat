@@ -159,7 +159,7 @@
 
                         @foreach($cates as $cate_submenu)
                         <li class="nav-item nav-items ">
-                            <a href="/phong-khach" class="nav-link">
+                            <a href="{{route('listProductInCate',$cate_submenu->id)}}" class="nav-link">
                                 <i class="fa fa-caret-right  hidden-md hidden-sm hidden-xs" aria-hidden="true"></i>
                                 {{$cate_submenu->ten_loaisanpham}}
 
@@ -171,7 +171,7 @@
                                 @foreach($catesCT as $catect_submenu)
                                 @if($catect_submenu->loaisanpham_id == $cate_submenu->id)
                                 <li class="">
-                                    <a class="nav-link" href="/ban-ghe-go">
+                                    <a class="nav-link" href="{{route('listProduct',$catect_submenu->id)}}">
                                         {{$catect_submenu->ten_chitiet_loaisanpham}}
                                     </a>
 
